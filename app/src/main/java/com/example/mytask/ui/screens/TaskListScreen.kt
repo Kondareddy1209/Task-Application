@@ -114,7 +114,7 @@ fun TaskListScreen(navController: NavController) {
                                 contentDescription = if (showMap) "List View" else "Map View"
                             )
                         }
-                        IconButton(onClick = { /* Navigate to profile */ }) {
+                        IconButton(onClick = { navController.navigate(Screen.Profile.route) }) {
                             Icon(imageVector = Icons.Default.Person, contentDescription = "Profile")
                         }
                     },

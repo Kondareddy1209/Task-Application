@@ -12,6 +12,9 @@ import com.example.mytask.ui.screens.TaskMapScreen
 import com.example.mytask.ui.screens.auth.AuthScreen
 import com.example.mytask.ui.screens.auth.SignInScreen
 import com.example.mytask.ui.screens.auth.SignUpScreen
+import com.example.mytask.ui.screens.profile.ActiveSessionsScreen
+import com.example.mytask.ui.screens.profile.ChangePasswordScreen
+import com.example.mytask.ui.screens.profile.ProfileScreen
 
 @Composable
 fun AppNavigation() {
@@ -40,6 +43,15 @@ fun AppNavigation() {
         }
         composable(Screen.TaskMap.route) {
             TaskMapScreen()
+        }
+        composable(Screen.Profile.route) {
+            ProfileScreen(navController = navController)
+        }
+        composable(Screen.ChangePassword.route) {
+            ChangePasswordScreen(navController = navController)
+        }
+        composable(Screen.ActiveSessions.route) {
+            ActiveSessionsScreen(navController = navController)
         }
     }
 }
